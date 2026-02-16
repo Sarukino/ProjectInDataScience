@@ -1,10 +1,10 @@
-# main3.py – Icicle Chart megjelenítés Dash-sel
+# Icicle Chart
 import dash
 from dash import html, dcc
 import plotly.express as px
 import pandas as pd
 
-# Adatok létrehozása
+# data
 data = {
     'Category': ['Volunteer Profile', 'Volunteer Profile', 'Volunteer Profile', 'Skills', 'Skills', 'Availability', 'Availability'],
     'Label': ['Skills', 'Interests', 'Availability', 'Communication', 'First Aid', 'Weekdays', 'Weekends'],
@@ -13,7 +13,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Icicle diagram létrehozása
+# Icicle diagram 
 fig = px.icicle(
     df,
     path=['Category', 'Label'],
